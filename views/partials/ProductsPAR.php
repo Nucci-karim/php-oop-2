@@ -1,14 +1,15 @@
 <?php
 
-include __DIR__ . '/../../models/negozio.php';
+include __DIR__ . '/../../models/Products.php';
 include __DIR__ . '/../../models/category.php';
 include __DIR__ . '/../../models/food.php';
-$prodotto_1 = new Product("mandalorian",  40, "https://picsum.photos/300/300");
+
+$dogs = new category("Dogs", "fa-solid fa-dog");
 
 $arrayProducts = [
-    new Product("croccantini",  11, "https://picsum.photos/300/300"),
-    new Product("carne in scatola",  3, "https://picsum.photos/300/300"),
-    new Product("cuccia", "", "https://picsum.photos/300/300")
+    new product("croccantini",  11, "https://picsum.photos/300/300", $dogs),
+    new product("carne in scatola",  3, "https://picsum.photos/300/300", $dogs),
+    new product("cuccia", "100", "https://picsum.photos/300/300", $dogs)
 ]
 
 
@@ -22,7 +23,8 @@ $arrayProducts = [
             <img src="<?php echo $elem->image ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $elem->nome ?></h5>
-                <p class="card-text">Prezzo: <?php echo $elem->prezzo ?> &euro</p>
+                <p class="card-text">Prezzo: <?php echo $elem->prezzo ?> €</p>
+                <?php echo $elem->get_category_icon()?>
             </div>
             </div>
         </div>

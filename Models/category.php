@@ -1,5 +1,5 @@
 <?php
-class category extends product{
+class category{
     public $name;
     public $icon;
 
