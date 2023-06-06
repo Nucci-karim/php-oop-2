@@ -12,13 +12,16 @@
         $this->category = $_category;
     }
 
-    public function get_product_details(){
-        return "Product: $this->nome, ha una durata di:  $this->duration"; 
-    }
+    // public function get_product_details(){
+    //     return "Product: $this->nome, ha una durata di:  $this->duration"; 
+    // }
     public function get_category_icon(){
         $icon = $this->category->icon;
         return "<i class='$icon'></i>";
     }
+    // public function get_expiration_date(){
+    //     return $this->expiration;
+    // }
  }
  
  

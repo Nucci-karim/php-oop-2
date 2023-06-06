@@ -6,12 +6,12 @@ include __DIR__ . '/../../models/food.php';
 
 $dogs = new category("Dogs", "fa-solid fa-dog");
 
-$food = new food("croccantini",  12, "https://picsum.photos/300/300", $dogs);
+$food = new food("croccantini",  12, 'https://picsum.photos/300/300', $dogs, '10/12/24');
 
 $arrayProducts = [
-    new product("croccantini",  11, "https://picsum.photos/300/300", $dogs),
-    new product("carne in scatola",  3, "https://picsum.photos/300/300", $dogs),
-    new product("cuccia", "100", "https://picsum.photos/300/300", $dogs)
+    new food('croccantini',  11, 'https://picsum.photos/300/300', $dogs, '10/12/24'),
+    new food("carne in scatola",  3, 'https://picsum.photos/300/300', $dogs, '18/12/24'),
+    new product('cuccia', 100, 'https://picsum.photos/300/300', $dogs)
 ]
 
 
@@ -25,6 +25,7 @@ $arrayProducts = [
             <img src="<?php echo $elem->image ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $elem->nome ?></h5>
+                <?php echo $elem->get_expiration_date() ?>
                 <p class="card-text">Prezzo: <?php echo $elem->prezzo ?> €</p>
                 <?php echo $elem->get_category_icon()?>
             </div>
