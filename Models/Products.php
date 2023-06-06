@@ -5,7 +5,7 @@
     public $image;
     public $category;
 
-    public function __construct($_nome, $_prezzo, $_image, category $_category ){
+    public function __construct($_nome, $_prezzo, $_image, category $_category){
         $this->nome = $_nome;
         $this->prezzo = $_prezzo;
         $this->image = $_image;

@@ -6,6 +6,8 @@ include __DIR__ . '/../../models/food.php';
 
 $dogs = new category("Dogs", "fa-solid fa-dog");
 
+$food = new food("croccantini",  12, "https://picsum.photos/300/300", $dogs);
+
 $arrayProducts = [
     new product("croccantini",  11, "https://picsum.photos/300/300", $dogs),
     new product("carne in scatola",  3, "https://picsum.photos/300/300", $dogs),
